@@ -1,0 +1,14 @@
+server:
+    port: 80
+    context-path: /
+
+datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/subway
+    username: root
+    password: root
+
+jpa:
+    hibernate:
+    ddl-auto: update
+    show-sql: true

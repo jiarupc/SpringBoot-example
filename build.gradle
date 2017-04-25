@@ -1,0 +1,36 @@
+buildscript {
+	ext {
+		springBootVersion = "1.5.3.RELEASE"
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: "groovy"
+apply plugin: "org.springframework.boot"
+
+version = "0.0.1-SNAPSHOT"
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+//	SpringBoot 核心
+	compile "org.springframework.boot:spring-boot-starter-web"
+//	Html 模板
+	compile "org.springframework.boot:spring-boot-starter-thymeleaf"
+//	对象持久化
+	compile "org.springframework.boot:spring-boot-starter-data-jpa"
+//	mysql
+	compile "mysql:mysql-connector-java"
+//	项目热部署
+	compile "org.springframework:springloaded"
+//	测试
+	testCompile "org.springframework.boot:spring-boot-starter-test"
+}
